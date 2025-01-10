@@ -63,7 +63,7 @@ app.put('/students/:name', async (req, res) => {
 app.delete('/student/:rollNumber', async (req, res) => {
     try {
         const rollNumber = parseInt(req.params.rollNumber);
-        const result = await students.deleteOne({ rollNumber });
+        const result = await students.deleteOne({ "rollNumber":rollNumber });
         res.status(200).send("Student Deleted");
     } catch (err) {
         res.status(400).send(err);

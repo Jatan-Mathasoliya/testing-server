@@ -2,9 +2,9 @@ const express = require('express');
 const { MongoClient } = require('mongodb');
 const cors = require('cors')
 
-app.use(cors())
 const app = express();
 const port = 3000;
+app.use(cors())
 
 const uri = "mongodb+srv://jatancodinggita:wokfbfpILbWcq3vF@practisedata.mmwpr.mongodb.net/?retryWrites=true&w=majority&appName=Practisedata";
 const dbName = "CodingGita";
